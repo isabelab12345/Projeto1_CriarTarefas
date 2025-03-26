@@ -1,25 +1,10 @@
 # Projeto1_CriarTarefas
 
-GRUPO:
-Isabela Bonoto de Castro
-,
-Gustavo Runge Passarelli
+PROBLEMAS CORRIGIDOS EM 'Projeto.h':
 
+--Linha 1 - Número máximo de tarefas é 100 e não 5;
 
-PROBLEMAS CORRIGIDOS:
---Erros em 'Project.h'
+--Linha 12 - "ListaDeTarefas" estava sem o "s" no final;
 
-
---Erros em 'Project.c'
-
-
---Erros em 'main.c'
-
-
-
-FUNÇÕES IMPLEMENTADAS:
-
-
-
-FORMA DE COMPILAÇÃO E EXECUÇÃO DO CÓDIGO:
+--Linha 18 - "nome" estava com "s" no final;
 
