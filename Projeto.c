@@ -1,12 +1,12 @@
 #include "projeto.h"
-#include "stdio.h"
+#include <stdio.h>     //para incluir bibliotecas, utiliza-se <> e não aspas
 #include "string.h"
 
 int criarTarefa(ListaDeTarefas *lt){
     if(lt->qtd >= TOTAL_TAREFAS)
     return 1;
     
-	Tarefa *t=&lt->tarefas[lt->qtd];
+	    Tarefa *t=&lt->tarefas[lt->qtd];
 
     printf("Entre com a prioridade da tarefa: ");
     scanf("%d", &t->prioridade);
@@ -30,12 +30,12 @@ int deletarTarefa(ListaDeTarefas *lt){
    printf("Entre com a posicao que deseja deletar: ");
    scanf("%d", &pos);
    
-   if (pos <0 || pos < lt->qtd - 1)
+   if (pos < 0 || pos > lt->qtd - 1)    // pos '>' lt->qtd e não '<'
    return 2;
    
    for (; pos<lt->qtd-1; pos++){
    	lt->tarefas[pos].prioridade=lt->tarefas[pos+1].prioridade; 
-	   strcpy(lt->tarefas[pos].descricao, lt->tarefas[pos+1].categoria); 
+	   strcpy(lt->tarefas[pos].descricao, lt->tarefas[pos+1].descricao);   //essa parte deleta a descrição da tarefa e não a categoria 
 	   strcpy(lt->tarefas[pos].categoria, lt->tarefas[pos+1].categoria);
 
    }
@@ -49,7 +49,7 @@ int listarTarefas(ListaDeTarefas *lt){
 	
 
 int i;
-for(i=0; i< lt->qtd; i++){
+for(i=0; i < lt->qtd; i++){
 	printf("Pos: %d \t Prioridade: %d \t Categoria: %s\n", i, 
 	lt->tarefas[i].prioridade, lt->tarefas[i].categoria);
 	printf("Descricao: %s\n", lt->tarefas[i].descricao);
@@ -57,7 +57,7 @@ for(i=0; i< lt->qtd; i++){
     return 0;
 }
 
-int carregarTarefas(ListaDeTarefas *lt, char nome){
+int carregarTarefas(ListaDeTarefas *lt, char *nome){   //faltou o asterisco antes de 'nome'
    FILE *fp=fopen(nome, "rb");
    if (fp == NULL)
    return 1;
@@ -68,7 +68,7 @@ int carregarTarefas(ListaDeTarefas *lt, char nome){
 }
 
 int salvarTarefas(ListaDeTarefas *lt, char *nome){
-   FILE *fp=fopen(nome, "wb")
+   FILE *fp=fopen(nome, "wb");   //faltou ponto e vírgula(;) no final da linha
    if (fp == NULL)
    return 1;
    
