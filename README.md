@@ -2,6 +2,8 @@
 
 PROBLEMAS CORRIGIDOS EM 'Projeto.c':
 
+--Linha 1 - O nome do arquivo é 'Projeto.h' com p maiúsculo, e não 'projeto.h';
+
 --Linhas 2 e 3 - Para incluir bibliotecas, utiliza-se <> e não aspas("");
 
 --Linha 33 -  Utilizou-se o símbolo de menor(<), quando o certo era usar maior(>);

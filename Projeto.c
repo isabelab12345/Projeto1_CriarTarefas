@@ -1,4 +1,4 @@
-#include "projeto.h"
+#include "Projeto.h"   //o nome do arquivo é 'Projeto.h' com p maiúsculo, e não 'projeto.h'
 #include <stdio.h>     //para incluir bibliotecas, utiliza-se <> e não aspas
 #include <string.h>    //para incluir bibliotecas, utiliza-se <> e não aspas
 
