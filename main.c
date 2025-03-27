@@ -1,5 +1,5 @@
 #include "projeto.h"
-#include "stdio.h"
+#include <stdio.h>     //para incluir bibliotecas, ultiliza-se <> e não aspas ("")
 
 int main(){
 ListaDeTarefas lt;
@@ -7,11 +7,11 @@ ListaDeTarefas lt;
 char arquivo[] = "tarefas";
 int codigo, opcao;
 
-codigo=carregarTarefas(lt, arquivo);
+codigo=carregarTarefas(&lt, arquivo);  //faltou o '&' antes de 'lt'
 
 if (codigo !=0){
 printf("Lista de tarefas nao carregada");
-lt.qtd=2;
+lt.qtd=0;    //o valor certo é '0' e não '2'
 }
 
 do{
@@ -33,7 +33,7 @@ else if(codigo ==2)
 }
 else if(opcao == 3){
     codigo=listarTarefas(&lt);
-   if (codigo ==2)
+   if (codigo == 1)     //o código de erro na função 'listarTarefas' é 1 e não 2
    printf("Erro ao listar tarefas: nao existem tarefas para serem listadas");
 }
 else {
@@ -42,7 +42,7 @@ else {
 }while (opcao != 0);
 
 codigo=salvarTarefas(&lt,arquivo);
-if(codigo ==0)
+if(codigo !=0)    //o certo é '!=' e não '=='
 printf("Erro ao salvar tarefas em arquivo");
 
 
