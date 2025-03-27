@@ -2,6 +2,8 @@
 
 PROBLEMAS CORRIGIDOS EM 'main.c':
 
+--Linha 1 - O nome do arquivo é 'Projeto.h' com p maiúsculo, e não 'projeto.h';
+
 --Linha 2 - Para incluir bibliotecas, utiliza-se <> e não aspas("");
 
 --Linha 10 - Faltou o '&' antes de 'lt';
