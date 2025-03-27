@@ -1,6 +1,6 @@
 #include "projeto.h"
 #include <stdio.h>     //para incluir bibliotecas, utiliza-se <> e não aspas
-#include "string.h"
+#include <string.h>    //para incluir bibliotecas, utiliza-se <> e não aspas
 
 int criarTarefa(ListaDeTarefas *lt){
     if(lt->qtd >= TOTAL_TAREFAS)

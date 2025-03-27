@@ -2,7 +2,7 @@
 
 PROBLEMAS CORRIGIDOS EM 'Projeto.c':
 
---Linha 2 - Para incluir bibliotecas, utiliza-se <> e não aspas;
+--Linhas 2 e 3 - Para incluir bibliotecas, utiliza-se <> e não aspas("");
 
 --Linha 33 -  Utilizou-se o símbolo de menor(<), quando o certo era usar maior(>);
 
